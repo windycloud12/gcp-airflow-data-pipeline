@@ -113,31 +113,36 @@ To handle a lot of data quickly (high throughput) or real-time data, I plan to u
       docker compose up -d
       ```
 
-## Project Phases
+## Project Progress
 
-```mermaid
-graph LR
-    subgraph Foundation & Batch Processing
-        A[Set up Airflow/BQ Environment/Schema] --> B(Initial Data Load and Cleaning Validation)
-        B --> C{Display BQ Data on Looker Studio}
-    end
+| Phase | Task | Status | Notes |
+| :--- | :--- | :---: | :--- |
+| **1. Foundation & Batch Data** | | | |
+| | Set up Airflow service | ✅ | Started Airflow on a GCE virtual machine. |
+| | Set up BigQuery tables | ✅ | Designed tables based on data needs. |
+| | Extract and Load Data | ✅ | Loaded raw data into BigQuery. |
+| | Show Data in Looker Studio | 📌 | Create a simple dashboard. |
+| **2. Streaming Data** | | | |
+| | Create Pub/Sub topic | 📌 |  |
+| | Use Airflow to send test data | 📌 | Simulate a data stream. |
+| | Create a data subscriber | 📌 | Using Dataflow or Cloud Run. |
+| | Write stream data to BigQuery | 📌 |  |
+| **3. Analysis & Optimization** | | | |
+| | Analyze data and create charts | 📌 | Find useful information from the data. |
+| | Improve the data pipeline | 📌 | Make it faster or cheaper. |
+| **4. Documentation & Delivery** | | | |
+| | Record final demo video | 📌 | |
+| | Complete project report and README | 📌 | |
+| **5. Future Plans** | | | |
+| | Use dbt for data modeling | 📅 | |
+| | Create a CI/CD pipeline | 📅 |  |
 
-    subgraph Phase 1-Streaming
-        C --> D[Create Pub/Sub Topic and Connection];
-        D --> E[Airflow Simulates Streaming];
-        E --> F[Develop Dataflow/Cloud Run Subscriber];
-        F --> G[Write Streaming Data to BQ Table];
-    end
 
-    subgraph Phase 2-Optimization
-        G --> H(Analyze Data - Scenario and Visualization);
-        H --> I[Optimize ETL Pipeline];
-        I --> J[Record Final Demo Video];
-        J --> K[Finalize Project Report and README];
-    end
-    
-    K -- Project Completed --> Z(Milestone);
+### **Legend**
 
-```
+* ✅ **Done:** This task is finished.
+* 🚧 **In Progress:** I am working on this now.
+* 📌 **To Do:** This is a task I need to start.
+* 📅 **Planned:** An idea for the future, but not started.
 
 ###### tags: `Airflow` `GCP` `ELT`
