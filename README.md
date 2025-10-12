@@ -45,14 +45,10 @@ graph LR
 
 ```
 The current data pipeline uses the **Airflow Batch Processing** mode:
-
-1. **Data Source:** Taiwan historical weather data (https://ci.taiwan.gov.tw/dsp/Views/dataset/weather.aspx).
-
+1. **Data Source:** Taiwan historical weather data (https://ci.taiwan.gov.tw/dsp/Views/dataset/weather.aspx).
 2. **Extract/Load:** The Airflow DAG runs a Python script inside a GCE container. It writes data directly to the **RAW Table** in BigQuery.
-
-3. [TODO] **Transform:** The Airflow DAG runs BigQuery DML/DDL queries for data cleaning and analysis. 
-
-4. [TODO] **Visualization:** Show basic information on a dashboard.
+3. [TODO] **Transform:** The Airflow DAG runs BigQuery DML/DDL queries for data cleaning and analysis.
+4. [TODO] **Visualization:** Show basic information on a dashboard.
 
 
 ### Future: Streaming
@@ -98,9 +94,8 @@ To handle a lot of data quickly (high throughput) or real-time data, I plan to u
   * Need a **Service Account** to access BigQuery or configured **gcloud default credentials**.
 
 #### 5.2 GCE VM Configuration
-  1.  **VM Config:** I suggest using `e2-standard-2` (2 vCPU, 8GB RAM) or higher (Airflow needs at least 4GB).
-  
-  2.  **SSH Stability:** Set up a **Static External IP** $\to$ This helps fix the problem of the IP changing after a restart.
+1. **VM Config:** I suggest using `e2-standard-2` (2 vCPU, 8GB RAM) or higher (Airflow needs at least 4GB).
+2. **SSH Stability:** Set up a **Static External IP** $\to$ This helps fix the problem of the IP changing after a restart.
 
 #### 5.3 Start Airflow
   1.  **Clone Project:**
