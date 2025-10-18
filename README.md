@@ -121,12 +121,12 @@ To handle a lot of data quickly (high throughput) or real-time data, I plan to u
 | | Set up Airflow service | ✅ | Started Airflow on a GCE virtual machine. |
 | | Set up BigQuery tables | ✅ | Designed tables based on data needs. |
 | | Extract and Load Data | ✅ | Loaded raw data into BigQuery. |
-| | Show Data in Looker Studio | 📌 | Create a simple dashboard. |
+| | Show Data in Looker Studio | 🚧 | Create a simple dashboard. |
 | **2. Streaming Data** | | | |
-| | Create Pub/Sub topic | 📌 |  |
-| | Use Airflow to send test data | 📌 | Simulate a data stream. |
-| | Create a data subscriber | 📌 | Using Dataflow or Cloud Run. |
-| | Write stream data to BigQuery | 📌 |  |
+| | Create Pub/Sub topic | ✅ |  |
+| | Use Airflow to send test data | ✅ | Simulate a data stream. |
+| | Create a data subscriber | 🚧 | Using Dataflow or Cloud Run. |
+| | Write stream data to BigQuery | 🚧 |  |
 | **3. Analysis & Optimization** | | | |
 | | Analyze data and create charts | 📌 | Find useful information from the data. |
 | | Improve the data pipeline | 📌 | Make it faster or cheaper. |
